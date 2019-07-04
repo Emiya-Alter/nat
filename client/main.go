@@ -12,6 +12,7 @@ import (
 func main() {
 	local := flag.String("local", "127.0.0.1:80", "本地客户端访问ip端口")
 	server := flag.String("server", "88.88.88.88:50050", "服务端数据转发ip端口")
+	flag.Parse()
 	log.Printf( "start to connect address: %s and address: %s", *local, *server)
 	host2host(*local, *server)
 }
